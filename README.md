@@ -5,7 +5,7 @@ A simple cli for wol.gg
 ```
 nodejs wol.js summonername (region)
 ```
-##Example:
+## Example:
 ```
 nodejs wol.js xnightforcex euw
 ```
