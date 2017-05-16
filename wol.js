@@ -1,6 +1,11 @@
 var request = require('request');
 var fs      = require('fs');
 
+/**
+	WastedOnLol Client
+	Usage: wol.js summonername (region)
+	by Nightf0rc3
+**/
 if (process.argv[2]) {
 	getKey(function(key) {
 		if(!key) {
@@ -50,7 +55,7 @@ function getInfo(key) {
 		url: 'https://wol.gg/api/stats/' + region + '/' + process.argv[2] + '/0',
 		headers: {'Authorization': 'Bearer ' + key}
 	}
-	console.log('requesting information...');
+	//console.log('requesting information...');
 	request(req, function(error, response, body){
 		if (!error) {
 			var content = JSON.parse(body);
